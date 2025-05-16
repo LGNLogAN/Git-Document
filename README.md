@@ -11,9 +11,19 @@ git clone [URL]                         # 원격 저장소를 복제
 
 ## 🕰️ 지정된 커밋시점으로 되돌리기
 ```bash
-git log --online
+git log --oneline
 git reset --hard [Hash 값]
 git push origin [브랜치] --force
+```
+
+## ✏️ 특정 커밋 삭제
+```bash
+git log --oneline
+git rebase -i [지우고싶은 이전 커밋 코드값]
+i 눌러 편집모드로 진입
+pick -> drop 변경
+esc -> :wq! -> enter
+git push origin [커밋삭제한 브랜치] --force ( 강제 푸쉬 )
 ```
 
 ## 🔍 브랜치 관련
@@ -63,4 +73,5 @@ git checkout [브랜치명]
 or
 git checkout -b [브랜치명]
 ```
+
 
